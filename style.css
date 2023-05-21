@@ -1,0 +1,65 @@
+
+        .container {
+            background-color: #000;
+            border: 2px solid #fff;
+            padding: 5%;
+            width: 90%;
+            height: 0;
+            padding-bottom: 90%;
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+            animation: spin 30s linear infinite;
+        }
+
+        .planet {
+            position: absolute;
+            border-radius: 50%;
+            box-shadow: 0 0 30px #0a73dc;
+        }
+
+        .sun {
+            width: 20%;
+            padding-bottom: 20%;
+            background-color: #ff0;
+            top: 40%;
+            left: 40%;
+        }
+
+        .earth {
+            width: 6%;
+            padding-bottom: 6%;
+            background-image: url(earth.png);
+            top: 20%;
+            left: 20%;
+            animation: orbit 5s linear infinite;
+        }
+
+        .mars {
+            width: 5%;
+            padding-bottom: 5%;
+            background-image: url(mars.png);
+            top: 30%;
+            left: 30%;
+            animation: orbit 7s linear infinite;
+        }
+
+        .jupiter {
+            width: 10%;
+            padding-bottom: 10%;
+            background-image: url(jupiter.png);
+            top: 50%;
+            left: 50%;
+            animation: orbit 15s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        @keyframes orbit {
+            0% { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+            100% { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+        }
+   
